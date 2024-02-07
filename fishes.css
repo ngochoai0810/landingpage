@@ -11,7 +11,6 @@ body{
 }
 
 .all{
-    max-width: 1140px;
     width: 100%;
 }
 
@@ -42,6 +41,9 @@ h4{
     font-weight:600 ;
 }
 header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -104,9 +106,13 @@ header{
 .section1{
     padding: 6rem;
 }
-.main1,.main2, .main3, .main4, .main5, .main6 {
-   
+.main1{
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
+
+
 .part2{
     display: flex;
     flex-wrap: wrap;
@@ -134,7 +140,7 @@ header{
 
 }
 .box{
-    max-width: 1140px;
+    max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -159,18 +165,26 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-
-
+    position: relative;
 }
 .box2 img{
     max-width: 63%;
-    height: auto;
+    height: auto;                
     margin-top: 4rem;
     vertical-align: middle;
     border-style: none;
-    z-index: 2;
+    z-index: 100;
+    animation: fudaa 2s ease-out 1;
 }
+@keyframes fudaa {
+    from {
+        right: -200px;
+    }
 
+    to {
+        right: 0px;
+    }
+}
 .doublebutton{
     display: flex;
     margin-top: 30px;
@@ -195,16 +209,19 @@ header{
     margin-bottom: 20px;
 }
 .main2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 50px 0;
-    max-width: 1140px;
     margin-bottom: 2rem;
+
 
 }
 .boxx{
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
-    max-width: 1140px;
+    max-width: 1440px;
 }
 .ib .number{
     color: #4528DC;
@@ -238,6 +255,7 @@ header{
 .boxxx{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -259,7 +277,8 @@ header{
 }
 .what{
     display: flex;
-    flex-wrap: wrap     ;
+    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
     align-items:center ;
 }
@@ -277,8 +296,8 @@ header{
     flex-wrap: wrap;
     margin-top: 5rem;
     width: 100%;
-    max-width: 100%;
-    margin: 5rem 0;
+    max-width: 1440px;
+    margin: 3rem 0;
 }
 .textbox img{
    width: 3rem;
@@ -294,15 +313,35 @@ header{
    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.12);
    border-radius: 3rem;
    transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+   animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
 }
 .boxxx1:hover{
     transform: translateY(-10px)
 }
-.main4{
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main4, .main6, .main7, .main8, .main9, .main10, .main11{
     width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 .textmain4{
     flex: 1;
@@ -378,6 +417,9 @@ li{
     margin-top: 5rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
 }
 .img5{
     flex: 1 ;
