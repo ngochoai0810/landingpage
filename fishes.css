@@ -335,7 +335,7 @@ header{
     justify-content: center;
     align-items: center;
 }
-.main4, .main6, .main7, .main8, .main9, .main10, .main11{
+.main4, .main6, .main7, .main8, .main9, .main10, .main11, .main12, .main13, .main14, .main15{
     width: 100%;
     max-width: 1440px;
     display: flex;
@@ -452,7 +452,6 @@ li{
 }
 .row{
     display: flex;
-    flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -764,5 +763,196 @@ button:hover{
 .teamimg:hover img{
     transform: scale(1.3);  
 }
+.section12{
+    position: relative;
+    padding: 100px 0;
+    z-index: 0;
+    overflow: hidden;
+    background: url(https://theme-land.com/sapp/demo/assets/img/bg/download-bg.jpg) no-repeat fixed center center/cover;
+}
+.section12::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(16,16,45,1);
+    opacity: 0.8;
+    z-index: -1;
+}
+.main12{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+}
+.textr{
+    max-width: 900px;
+    display: flex;
+    text-align: center;
+}
+.rtr{
+    margin: 1.3rem 0;
+}
+.section13{
+    padding: 100px 0;
+    position: relative;
+    background: white url(https://theme-land.com/sapp/demo/assets/img/bg/map.png)
+    no-repeat scroll center center/cover;
 
+}
+.main13{
+    position: relative;  
+}
+.textrr{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    display: flex;
+    text-align: center; 
+}
+.logo input{
+    font-size: 15px;
+    height: 3.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    box-shadow: #ddd 0px 0px 0px 1px;
+    text-align: center;
+    padding: 0 20px; 
+}
+.textrr p {
+ padding: 1.5rem 0;
+}
+.section14{
+    position: relative;
+    background-color: #f6f9fe;
+}
+.middletext a{
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    outline: none;
+}
+.middletext, .textmiddle{
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+}
+.iconr{
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #7c4fe0;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+.ingrt{
+    text-align: center;
+}
+.ingrt input,textarea{
+    margin-bottom: 1rem;
+    font-size: 15px;
+    height: 3.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    box-shadow: #ddd 0px 0px 0px 1px;
+    padding: 0 20px; 
+}
+.ingrm p{
+    max-width: 60%;
+}
+.ingrm ul{
+    max-width: 120%;
+}
+.section15{
+    z-index: -1;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
+.iconcuoi{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+.iconcuoi a{
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin: 5px;
+    align-items: center;
+    position: relative;
+    color: white
+}
+.iconcuoi i{
+    display: block;
+    margin: auto;
+    width: 100%;
+    overflow: visible;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+.finishtext a:hover{
+    color: #7c4fe0;
+}
+.downloadbutton a{
+    text-align: left;
+}
+.downloadbutton img{
+    max-width:50% ;
+}
+.downloadbutton{
+    margin-top: 2rem;
+}
+.finishc{
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+}
+.copy{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid;
+    padding: 2rem 0;
+    color: #666;
+}
+.finish1{
+    flex: 0.8;
+    padding-right: 3rem;
+}
+.finish2, .finish3{
+
+    flex: 1;
+}
+
+.finish4{
+    flex: 2;
+}
+.main15{
+    margin-top: 9rem;
+}
+.finishtext a{
+    text-decoration: none;
+}
+.right a{
+    text-decoration: none;
+    color: #666;
+}
+.deco li a{
+    color: #000;
+}
