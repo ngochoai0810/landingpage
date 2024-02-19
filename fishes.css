@@ -104,7 +104,7 @@ header{
     opacity: 1; 
 }
 .section1{
-    padding: 6rem;
+    padding: 4.5rem 0rem;
 }
 .main1{
    display: flex;
@@ -140,8 +140,9 @@ header{
 
 }
 .box{
-    max-width: 1440px;
+    max-width: 1140px;
     display: flex;
+    margin-top: 5rem;
     flex-wrap: wrap;
 }
 .box1{
@@ -167,13 +168,17 @@ header{
     align-items: center;
     position: relative;
 }
+.sbrand{
+    margin-right: 31rem;
+}
 .box2 img{
-    max-width: 63%;
+    position: absolute;
+    max-width: 56%;
     height: auto;                
     margin-top: 4rem;
     vertical-align: middle;
     border-style: none;
-    z-index: 100;
+    z-index: 100; 
     animation: fudaa 2s ease-out 1;
 }
 @keyframes fudaa {
@@ -188,6 +193,12 @@ header{
 .doublebutton{
     display: flex;
     margin-top: 30px;
+}
+.doublebutton img{
+    max-width: 12rem;
+}
+.gg{
+    margin-right: 0.65rem;
 }
 .learn{
     font-size: 1rem;
@@ -221,7 +232,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
-    max-width: 1440px;
+    max-width: 1140px;
 }
 .ib .number{
     color: #4528DC;
@@ -296,7 +307,7 @@ header{
     flex-wrap: wrap;
     margin-top: 5rem;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1140px;
     margin: 3rem 0;
 }
 .textbox img{
@@ -312,19 +323,20 @@ header{
    width: 100%;
    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.12);
    border-radius: 3rem;
-   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-   animation-name: fadeInLeft;
+   animation: 1.5s ease-out 0s;
+   animation-name: moveleft;
 }
 
-@-webkit-keyframes fadeInLeft {
-    0% {
+@keyframes moveleft {
+    0%
+     {
+        left: -300px;
         opacity: 0;
-        transform: translate3d(-2000px,0,0)
     }
-
-    to {
+    100% 
+    {
+        left: 0px;
         opacity: 1;
-        transform: translateZ(0)
     }
 }
 .boxxx1:hover{
@@ -337,7 +349,7 @@ header{
 }
 .main4, .main6, .main7, .main8, .main9, .main10, .main11, .main12, .main13, .main14, .main15{
     width: 100%;
-    max-width: 1440px;
+    max-width: 1140px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -419,7 +431,7 @@ li{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1440px;
+    max-width: 1140px;
 }
 .img5{
     flex: 1 ;
@@ -537,8 +549,8 @@ li{
 .ingre p{
     max-width: 65%;
 }
-.ingre h2{
-    max-width: 60%;
+.ib{
+    padding: 0rem 5rem;
 }
 .slides{
     display:flex ;
@@ -623,11 +635,19 @@ li{
     position: relative;
     width: 100%;
     padding: 0 15px;
-    animation: 3s ease-out 0s;
+    animation: 1.5s ease-out 0s;
 }
 @keyframes fuda {
-    0% {left: -200px;}
-    100% {left: 0px;}
+    0%
+     {
+        left: -600px;
+        opacity: 0;
+    }
+    100% 
+    {
+        left: 0px;
+        opacity: 1;
+    }
 }
 .prixd2{
     flex: 0 0 50%;
@@ -635,11 +655,18 @@ li{
     position: relative;
     width: 100%;
     padding: 0 15px;
-    animation: 3s ease-out 0s;
+    animation: 1.5s ease-out 0s;
 }
 @keyframes fudas {
-    0% {right: -200px;}
-    100% {right: 0px;}
+    0% {
+        right: -600px;
+        opacity: 0;
+    }
+    100% 
+    {
+        right: 0px;
+        opacity: 1;
+    }
 }
 
 .prixd-ingre{
@@ -765,7 +792,7 @@ button:hover{
 }
 .section12{
     position: relative;
-    padding: 100px 0;
+    padding: 7.5rem 0;
     z-index: 0;
     overflow: hidden;
     background: url(https://theme-land.com/sapp/demo/assets/img/bg/download-bg.jpg) no-repeat fixed center center/cover;
@@ -955,4 +982,50 @@ button:hover{
 }
 .deco li a{
     color: #000;
+}
+@media (max-width: 991px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 15px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+    .bgr{
+        height: 500px !important;
+        padding-top: 0;
+    }
+}
+@media  (max-width:575px) {
+    h1 {
+        font-size: 2.5em;
+        line-height: 1.2;
+    }
+    h2 {
+        font-size: 2em;
+        line-height: 1.3;
+    }
+    .imghuman, .rui{
+        height: 4rem;
+        width: 4rem;
+    }
+    .juice{
+        padding: 50px 0;
+    }
+
 }
