@@ -16,47 +16,70 @@
     <div class="all">
          <div class="bgr">
         <div class="blue">
-            <header>
-                <div class="toolbar">
+            <header class="header sticky">
+                <div class="toolbar navbarr" id="navbarContainer">
                     <a href="http://sv.dut.udn.vn/" class="sbrand">
                         <img class="s" src="https://theme-land.com/sapp/demo/assets/img/logo/logo-white.png"
                             alt="brand-logo">
                     </a>
-                    <div class="part2">
+                    <div class="part2 navbar" id="Mynavbar">
+                        <a href="javascript:void(0);" class="baricon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
                         <ul class="tools">
-                            <il>
-                                <span class="home">Home 
-                                    <i class="fa fa-solid fa-caret-up fa-flip-vertical"
-                                        style="color: #bfbbbb;">
-                                       
-                                    </i>
-                                </span>
-    
-                            </il>
-                            <il>
+                            <li>
+                                <div class="dropdown">
+                                    <span class="home">Home 
+                                        <i class="fa fa-solid fa-caret-up fa-flip-vertical"
+                                            style="color: #bfbbbb;"> 
+                                        </i>
+                                        <div class="dropdown-content">
+                                            <a href="#">HomePage 1</a>
+                                            <a href="#">HomePage 2</a>
+                                            <a href="#">HomePage 3</a>
+                                            <a href="#">HomePage 4</a>
+                                            <a href="#">HomePage 5</a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
                                 <span class="features">Features</span>
-                            </il>
-                            <il>
-                                <span class="pages">Pages 
-                                    <i class=" fa fa-solid fa-caret-up fa-flip-vertical"
-                                        style="color: #bfbbbb;">
-                                    </i>
-                                </span>
-    
-                            </il>
-                            <il>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <span class="pages">Pages 
+                                        <i class=" fa fa-solid fa-caret-up fa-flip-vertical"
+                                            style="color: #bfbbbb;">
+                                        </i>
+                                    </span>
+                                </div>  
+                            </li>
+                            <li>
                                 <span class="screenshots">Screenshots</span>
-                            </il>
-                            <il>
+                            </li>
+                            <li>
                                 <span class="pricing">Pricing</span>
-                            </il>
-                            <il>
+                            </li>
+                            <li>
                                 <span class="contact">Contact</span>
-                            </il>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </header>
+            <script>
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbarContainer").style.top = "0";
+                } else {
+                document.getElementById("navbarContainer").style.top = "-89px";
+                }
+                }
+
+            </script>
             <section class="section1">
                     <div class="main1 juice">
                         <div class="box">   
@@ -97,7 +120,7 @@
                         <div class="boxx">
                             <div class=" ib user">
                                 <div class="number">
-                                    <span>10M</span>
+                                    <span> <p class="nbr">10</p>M</span>
                                 </div>
                                 <div class="lettre">
                                     <h5>Users</h5>
@@ -105,7 +128,7 @@
                             </div>
                             <div class="ib download">
                                 <div class="number">
-                                    <span>23K</span>
+                                    <span> <p class="nbr">23</p>K</span>
                                 </div>
                                 <div class="lettre">
                                     <h5>Download</h5>
@@ -113,7 +136,7 @@
                             </div>
                             <div class="ib customer">
                                 <div class="number">
-                                    <span>9M</span>
+                                    <span><p class="nbr">9</p>M</span>
                                 </div>
                                 <div class="lettre">
                                     <h5>Customer</h5>
@@ -121,7 +144,7 @@
                             </div>
                             <div class="ib developer">
                                 <div class="number">
-                                    <span>12K</span>
+                                    <span><p class="nbr">12</p>K</span>
                                 </div>
                                 <div class="lettre">
                                     <h5>Developer</h5>
@@ -957,6 +980,29 @@
             </section>
         </footer>
     </div>
+    <script>
+        var speed = 30;
+
+        function incEltNbr(className) {
+            var elts = document.querySelectorAll("." + className);
+            elts.forEach(function(elt) {
+                var endNbr = Number(elt.innerHTML);
+                incNbrRec(0, endNbr, elt);
+            });
+        }
+
+        function incNbrRec(i, endNbr, elt) {
+            if (i <= endNbr) {
+                elt.innerHTML = i;
+                setTimeout(function() {
+                    incNbrRec(i + 1, endNbr, elt);
+                }, speed);
+            }
+        }
+
+        incEltNbr("nbr"); 
+
+    </script>
 </body>
 
 </html>
