@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  transition: all ease 0.25s;
 }
 html,
 body {
@@ -54,6 +53,14 @@ h4 {
 }
 .nav-active{
   background:  white;
+  position: fixed;
+  opacity: 1;
+}
+.nav-active #s-purple{
+  display:inline-block;
+}
+.nav-active #s-white{
+  display: none;
 }
 .nav-active span{
   color: #000;
@@ -61,7 +68,9 @@ h4 {
 .nav-active.sbrand{
   background: linear-gradient(-47deg, #8731E8 0%, #4528DC 100%);;
 }
-
+.blue.opacity{
+  opacity: 1;
+}
 header {
   display: flex;
   align-items: center;
@@ -150,7 +159,7 @@ header {
 .navbar-toggler {
   display: none;
 }
-#s-purple {
+#s-purple{
   display: none;
 }
 .tools {
@@ -201,7 +210,7 @@ header {
 
 .box1 {
   max-width: 50%;
-  margin-right: 6rem;
+  flex: 2;
   align-self: self-start;
   z-index: 100;
   
@@ -241,7 +250,7 @@ header {
 }
 .box2 {
   /* flex: 1; */
-  padding-left: 2rem;
+  flex: 1;
   max-width: 560px;
   /* border-style: none; */
   display: flex;
@@ -462,7 +471,7 @@ header {
   opacity: 0;
 
 }
-.boxxx1.active{
+.boxxx1.box-active{
   transform: translateY(0);
   opacity: 1;
 }
@@ -489,7 +498,92 @@ header {
     padding: 5rem 3rem;
   }
 }
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
 @media (max-width: 768px) {
   .threebox {
     display: grid;
@@ -505,11 +599,11 @@ header {
 }
 .dropdown:hover .dropdown-content {
   /* display: block; */
-  opacity: 1;
+  display: flex;
 }
 .subdropdown:hover .subdropdown-content {
   /* display: block; */
-  opacity: 1;
+  display: flex;
 }
 
 
@@ -632,6 +726,10 @@ li {
 .icontext5 {
   display: flex;
 }
+.list5 i{
+  font-weight: 1000;
+  font-size: larger;
+}
 .section6 {
 	background: linear-gradient(-47deg, #8731E8 0%, #4528DC 100%);;
   padding: 50px 0;
@@ -653,7 +751,12 @@ li {
   margin-left: -15px;
   margin-right: -15px;
 }
-.main7 .row {
+.ruii{
+  display: flex;
+  flex-direction: column;
+}
+.main7{
+  display: flex;
   flex-direction: column;
 }
 .mySlides {
@@ -755,7 +858,7 @@ li {
   flex-direction: column;
   align-items: start;
   gap: 1rem;
-  opacity: 0;
+  display: none;
   position: absolute;
   left: 0;
   top: 3rem;
@@ -805,7 +908,7 @@ li {
   justify-content: start;
   flex-direction: column;
   gap: 1rem;
-  opacity: 0;
+  display: none;
   position: absolute;
   background-color: #f9f9f9;
   padding: 1rem 2rem;
@@ -946,46 +1049,32 @@ li {
   width: 100%;
   padding: 0 15px;
 }
+.prip.pri-active{
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
 .prixd1 {
   flex: 0 0 50%;
   max-width: 50%;
   position: relative;
   width: 100%;
   padding: 0 15px;
-  animation: fuda 1.5s ease;
+  transform: translateX(-600px);
+  opacity: 0;
 }
-@keyframes fuda {
-  0% {
-    /* left: -600px; */
-    transform: translateX(-600px);
-    opacity: 0;
-  }
-  100% {
-    /* left: 0px; */
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+
 .prixd2 {
   flex: 0 0 50%;
   max-width: 50%;
   position: relative;
   width: 100%;
   padding: 0 15px;
-  animation: fudas 1.5s ease;
-}
-@keyframes fudas {
-  0% {
-    transform: translateX(600px);
+   transform: translateX(600px);
     /* right: -600px; */
     opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    /* right: 0px; */
-    opacity: 1;
-  }
 }
+
 
 .prixd-ingre {
   padding: 3rem;

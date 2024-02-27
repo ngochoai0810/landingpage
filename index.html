@@ -21,9 +21,9 @@
 				<header class="header sticky" id="header">
 					<div class="toolbar navbarr" id="navbarContainer">
 						<a href="http://sv.dut.udn.vn/" class="sbrand">
-							<img class="s" id="s-white"
+							<img class="s ini" id="s-white"
 								src="https://theme-land.com/sapp/demo/assets/img/logo/logo-white.png" alt="brand-logo" />
-							<img class="s" id="s-purple" src="https://theme-land.com/sapp/demo/assets/img/logo/logo.png"
+							<img class="s in" id="s-purple" src="https://theme-land.com/sapp/demo/assets/img/logo/logo.png"
 								alt="logo-purple" />
 						</a>
 						<button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler"
@@ -411,7 +411,7 @@
 						<ul>
 							<li>
 								<div class="list5">
-									<span><i class="fa-solid fa-check" style="color: #b197fc"></i></span>
+									<span><i class="fa-solid fa-check" style="color: #7c4fe0"></i></span>
 									<span>Combined with a handful of model
 										sentence structures looks
 										reasonable.
@@ -420,7 +420,7 @@
 							</li>
 							<li>
 								<div class="list5">
-									<span><i class="fa-solid fa-check" style="color: #b197fc"></i></span>
+									<span><i class="fa-solid fa-check" style="color: #7c4fe0"></i></span>
 									<span>Contrary to popular belief, Lorem
 										Ipsum is not simply random
 										text.</span>
@@ -428,7 +428,7 @@
 							</li>
 							<li>
 								<div class="list5">
-									<span><i class="fa-solid fa-check" style="color: #b197fc"></i></span>
+									<span><i class="fa-solid fa-check" style="color: #7c4fe0"></i></span>
 									<span>Sed ut perspiciatis unde omnis iste
 										natus error sit voluptatem
 										accusantium</span>
@@ -436,7 +436,7 @@
 							</li>
 							<li>
 								<div class="list5">
-									<span><i class="fa-solid fa-check" style="color: #b197fc"></i></span>
+									<span><i class="fa-solid fa-check" style="color: #7c4fe0"></i></span>
 									<span>All the Lorem Ipsum generators on
 										the Internet tend to repeat
 										necessary.</span>
@@ -540,33 +540,53 @@
 							</div>
 						</div>
 					</div>
-					<div class="row" style="display: block; padding: 0">
-						<div class="slides">
+					<div class="ruii">
+						<div class="slideshow-container">
 							<div class="mySlides fade">
-								<img src="https://theme-land.com/sapp/demo/assets/img/screenshots/4.jpg" />
+							  <div class="numbertext">1 / 5</div>
+							  <img src="https://theme-land.com/sapp/demo/assets/img/screenshots/4.jpg" style="width:100%">
+							  <div class="text">Caption Text</div>
+							</div>
+							
+							<div class="mySlides fade">
+							  <div class="numbertext">2 / 5</div>
+							  <img src="https://theme-land.com/sapp/demo/assets/img/screenshots/5.jpg" style="width:100%">
+							  <div class="text">Caption Two</div>
+							</div>
+							
+							<div class="mySlides fade">
+							  <div class="numbertext">3 / 5</div>
+							  <img src="https://theme-land.com/sapp/demo/assets/img/screenshots/3.jpg" style="width:100%">
+							  <div class="text">Caption Three</div>
 							</div>
 							<div class="mySlides fade">
-								<img src="https://theme-land.com/sapp/demo/assets/img/screenshots/5.jpg" />
+								<div class="numbertext">4 / 5</div>
+								<img src="https://theme-land.com/sapp/demo/assets/img/screenshots/2.jpg" style="width:100%">
+								<div class="text">Caption Three</div>
+							  </div>
+							  <div class="mySlides fade">
+								<div class="numbertext">5 / 5</div>
+								<img src="https://theme-land.com/sapp/demo/assets/img/screenshots/1.jpg" style="width:100%">
+								<div class="text">Caption Three</div>
+							  </div>
+							
+							
+							<a class="prev" onclick="plusSlides(-1)">❮</a>
+							<a class="next" onclick="plusSlides(1)">❯</a>
+							
 							</div>
-							<div class="mySlides fade">
-								<img src="https://theme-land.com/sapp/demo/assets/img/screenshots/3.jpg" />
+							<br>
+							
+							<div style="text-align:center">
+							  <span class="dot" onclick="currentSlide(1)"></span> 
+							  <span class="dot" onclick="currentSlide(2)"></span> 
+							  <span class="dot" onclick="currentSlide(3)"></span> 
+							  <span class="dot" onclick="currentSlide(4)"></span>
+							  <span class="dot" onclick="currentSlide(5)"></span>
 							</div>
-							<div class="mySlides fade s4">
-								<img src="https://theme-land.com/sapp/demo/assets/img/screenshots/2.jpg" />
-							</div>
-							<div class="mySlides fade s5">
-								<img src="https://theme-land.com/sapp/demo/assets/img/screenshots/1.jpg" />
-							</div>
-						</div>
-						<br />
-						<div class="point" style="text-align: center">
-							<span class="dot"></span>
-							<span class="dot"></span>
-							<span class="dot"></span>
-							<span class="dot"></span>
-							<span class="dot"></span>
-						</div>
+							
 					</div>
+					
 				</div>
 			</div>
 		</section>
@@ -730,7 +750,7 @@
 						</div>
 						<div class="row heading">
 							<div class="row prix-ingre">
-								<div class="prixd1">
+								<div class="prip prixd1">
 									<div class="prixd-ingre">
 										<div class="plan-thumb">
 											<img class="rui"
@@ -777,7 +797,7 @@
 										</button>
 									</div>
 								</div>
-								<div class="prixd2">
+								<div class="prip prixd2">
 									<div class="prixd-ingre">
 										<div class="plan-thumb">
 											<img class="rui"
@@ -1460,14 +1480,20 @@
 
 		incEltNbr('nbr')
 	</script>
+	
 	<script>
 		const header = document.querySelector( ".header");
+		const blue = document.querySelector( ".blue");
 		function handleScroll() {
 			const scrollPosition = window.pageYOffset;
 			if (scrollPosition > 600) {
 				header.classList.add("nav-active");
+				blue.classList.add("opacity");
+				header.classList.add("in");
 			} else {
 				header.classList.remove("nav-active");
+				blue.classList.remove("opacity");
+				header.classList.remove("in");
 			}
 		}
 		window.addEventListener("scroll", handleScroll);
@@ -1482,7 +1508,7 @@
    		 	var elementVisible = 480;
 
     		if (elementTop < windowHeight - elementVisible) {
-      		boxxx1[i].classList.add("active");
+      		boxxx1[i].classList.add("box-active");
    		 	} else {
     		}
   			}
@@ -1490,6 +1516,53 @@
 		window.addEventListener("scroll", boxxx1 );
 
 	</script>
+	<script>
+		function prip() {
+  			var prip = document.querySelectorAll(".prip");
+
+  			for (var i = 0; i < prip.length; i++) {
+   		 	var windowHeight = window.innerHeight;
+    		var elementTop = prip[i].getBoundingClientRect().top;
+   		 	var elementVisible = 800;
+
+    		if (elementTop < windowHeight - elementVisible) {
+      		prip[i].classList.add("pri-active");
+   		 	} else {
+    		}
+  			}
+		}
+		window.addEventListener("scroll", prip );
+
+	</script>
+	<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+		
 </body>
 
 </html>
