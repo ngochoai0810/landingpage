@@ -20,7 +20,8 @@
 <body>
 	<div class="all">
 		<div class="bgr">
-			<div class="blue">
+			<div>
+				<div class="blue"></div>
 				<header class="header sticky" id="header">
 					<div class="toolbar navbarr" id="navbarContainer">
 						<a href="http://sv.dut.udn.vn/" class="sbrand">
@@ -187,7 +188,7 @@
 				</section>
 				<div class="imgbgr">
 					<div class="custom-shape-divider-bottom-1672627310" style="opacity: 1;">
-						<svg viewBox="0 0 1920 310" version="1.1" xmlns="http://www.w3.org/2000/svg"
+						<svg viewBox="0 0 1920 310" version="1.1" fill="#fff" xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink" class="svg replaced-svg">
 							<defs></defs>
 							<g id="sApp-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -804,8 +805,8 @@
 											</h2>
 										</div>
 										<div class="plan-decription">
-											<ul class="plan-list">
-												<li>5GB Linux Web Space</li>
+											<ul class="plan-list" >
+												<li >5GB Linux Web Space</li>
 												<li>5 MySQL Databases</li>
 												<li>24/7 Tech Support</li>
 												<li style="
@@ -852,9 +853,7 @@
 										</div>
 										<div class="plan-decription">
 											<ul class="plan-list">
-												<li>
-													10GB Linux Web Space
-												</li>
+												<li >10GB Linux Web Space</li>
 												<li>50 MySQL Databases</li>
 												<li>Unlimited Email</li>
 												<li style="
@@ -1487,115 +1486,105 @@
 		</footer>
 	</div>
 	<script>
-		/*var speed = 90
 
-		function incEltNbr(className) {
-			var elts = document.querySelectorAll('.' + className)
-			elts.forEach(function (elt) {
-				var endNbr = Number(elt.innerHTML)
-				incNbrRec(0, endNbr, elt)
-			})
-		}
-
-		function incNbrRec(i, endNbr, elt) {
-			if (i <= endNbr) {
-				elt.innerHTML = i
-				setTimeout(function () {
-					incNbrRec(i + 1, endNbr, elt)
-				}, speed)
-			}
-		}
-
-		incEltNbr('nbr')
 	</script>
 
 	<script>
-		const header = document.querySelector( ".header");
-		const blue = document.querySelector( ".blue");
+		const header = document.querySelector(".header");
+		const blue = document.querySelector(".blue");
 		function handleScroll() {
 			const scrollPosition = window.pageYOffset;
-			if (scrollPosition > 600) {
+			if (scrollPosition > 300) {
+				header.classList.remove("nav-active-up");
 				header.classList.add("nav-active");
 				blue.classList.add("opacity");
 				header.classList.add("in");
 			} else {
-				header.classList.remove("nav-active");
-				blue.classList.remove("opacity");
-				header.classList.remove("in");
+				if (header.classList.contains("nav-active")) {
+
+					header.classList.remove("nav-active");
+					blue.classList.remove("opacity");
+					header.classList.remove("in");
+
+					header.classList.add("nav-active-up");
+				}
+			}
+			if (scrollPosition < 60) {
+				header.classList.remove("nav-active-up");
 			}
 		}
 		window.addEventListener("scroll", handleScroll);
 	</script>
 	<script>
 		function boxxx1() {
-  			var boxxx1 = document.querySelectorAll(".boxxx1");
+			var boxxx1 = document.querySelectorAll(".boxxx1");
 
-  			for (var i = 0; i < boxxx1.length; i++) {
-   		 	var windowHeight = window.innerHeight;
-    		var elementTop = boxxx1[i].getBoundingClientRect().top;
-   		 	var elementVisible = 480;
+			for (var i = 0; i < boxxx1.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = boxxx1[i].getBoundingClientRect().top;
+				var elementVisible = 480;
 
-    		if (elementTop < windowHeight - elementVisible) {
-      		boxxx1[i].classList.add("box-active");
-   		 	} else {
-    		}
-  			}
+				if (elementTop < windowHeight - elementVisible) {
+					boxxx1[i].classList.add("box-active");
+				} else {
+				}
+			}
 		}
-		window.addEventListener("scroll", boxxx1 );
+		window.addEventListener("scroll", boxxx1);
 
 	</script>
 	<script>
 		function prip() {
-  			var prip = document.querySelectorAll(".prip");
+			var prip = document.querySelectorAll(".prip");
 
-  			for (var i = 0; i < prip.length; i++) {
-   		 	var windowHeight = window.innerHeight;
-    		var elementTop = prip[i].getBoundingClientRect().top;
-   		 	var elementVisible = 650;
+			for (var i = 0; i < prip.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = prip[i].getBoundingClientRect().top;
+				var elementVisible = 650;
 
-    		if (elementTop < windowHeight - elementVisible) {
-      		prip[i].classList.add("pri-active");
-   		 	} else {
-    		}
-  			}
+				if (elementTop < windowHeight - elementVisible) {
+					prip[i].classList.add("pri-active");
+				} else {
+				}
+			}
 		}
-		window.addEventListener("scroll", prip );
+		window.addEventListener("scroll", prip);
 
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 	<script>
-        const slideShow = () => {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 30,
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: true
-                    },
-                    400: {
-                        items: 2,
-                        nav: true
-                    },
-                    600: {
-                        items: 3,
-                        nav: true
-                    },
-                    1000: {
-                        items: 4,
-                        nav: true
-                    }
-                },
-                autoplay: true, // Enable autoplay
-                autoplayTimeout: 1000, // Set the autoplay timeout in milliseconds (e.g., 5000 milliseconds = 5 seconds)
-                dotsEach: 1,
-                smartSpeed: 8000,
-            });
-        }
+		const slideShow = () => {
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+				margin: 30,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: true
+					},
+					400: {
+						items: 2,
+						nav: true
+					},
+					600: {
+						items: 3,
+						nav: true
+					},
+					1000: {
+						items: 4,
+						nav: true
+					}
+				},
+				autoplay: true, // Enable autoplay
+				autoplayTimeout: 1000, // Set the autoplay timeout in milliseconds (e.g., 5000 milliseconds = 5 seconds)
+				dotsEach: 1,
+				smartSpeed: 8000,
+			});
+		}
 
-        $(document).ready(slideShow);
+		$(document).ready(slideShow);
 	</script>
 
 </body>
