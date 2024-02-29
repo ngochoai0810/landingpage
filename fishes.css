@@ -78,8 +78,8 @@ h4 {
   }
   
 }
-.boxxx p, .main4 p, .main5 p, .main5 span, .main8 p, .main15 p{
-  color: #565656;;
+.boxxx p, .main4 p, .main5 p, .main5 span, .main8 p, .main15 p, .ingre p{
+  color: #565656;
  }
 .nav-active-up {
   opacity: 0.95;
@@ -1449,8 +1449,11 @@ footer {
   text-decoration: none;
   color: #666;
 }
+.main13 {
+  padding: 4rem 0;
+}
 .deco li a {
-  color: #000;
+  color: #565656;
 }
 
 @media (max-width: 992px) {
